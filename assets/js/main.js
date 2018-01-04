@@ -6,26 +6,36 @@ var docLoaded = function () {
   let buttonLeft = document.getElementById("collapseLeft");
   let buttonUp = document.getElementById("collapseUp");
   let header = document.getElementsByClassName("site-header")[0];
+  let gridContainer = document.getElementsByClassName("grid-container")[0];
+  let pageContent = document.getElementsByClassName("page-content")[0];
+
+  // Save some width constants which will be used to animate the sidebar 
+  // collapsing and reopening
+  
   // Handles the collapsing header
   buttonLeft.addEventListener("click", function(e) {
-    let width = header.clientWidth;
+    let gridWidth = gridContainer.clientWidth;
+    let headerWidth = header.clientWidth;
     if (headerVisible) {
-      header.style.transform = "translate(-"+(width - 15)+"px,0)";
+      gridContainer.style.transform = "translate(-"+ (headerWidth - 28)+"px,0)";
       buttonLeft.innerHTML = '<i class="fa fa-angle-right" aria-hidden="true"></i>';
+      gridContainer.style.width = gridWidth + (headerWidth - 28) + "px";
     } else {
-      header.style.transform = "translate(0,0)";
+      gridContainer.style.transform = "translate(0,0)";
       buttonLeft.innerHTML = '<i class="fa fa-angle-left" aria-hidden="true"></i>';
+      gridContainer.style.width = "100vw";
     }
     headerVisible = !headerVisible;
   });
 
   buttonUp.addEventListener("click", function(e) {
-    let height = header.clientHeight;
+    let gridHeight = gridContainer.clientHeight;
+    let headerHeight = header.clientHeight;
     if (headerVisible) {
-      header.style.transform = "translate(0,-"+(height-15)+"px)";
+      gridContainer.style.transform = "translate(0,-"+(headerHeight - 28)+"px)";
       buttonUp.innerHTML = '<i class="fa fa-angle-down" aria-hidden="true"></i>';
     } else {
-      header.style.transform = "translate(0,0)";
+      gridContainer.style.transform = "translate(0,0)";
       buttonUp.innerHTML = '<i class="fa fa-angle-up" aria-hidden="true"></i>';
     }
     headerVisible = !headerVisible;

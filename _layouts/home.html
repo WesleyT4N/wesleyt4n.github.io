@@ -1,3 +1,26 @@
 ---
 layout: default
 ---
+<div class="home">
+
+    <div class="projects-heading">
+      <h1>My Projects</h1>
+    </div>
+    
+    {{ content }}
+  
+    <ul class="post-list">
+      {% for post in site.posts %}
+        <li class="post">
+          <div class="post-img">
+            <img src="{{ post.image | absolute_url }}" 
+                 aria-label="project screenshot"/>
+          </div>
+          <h2>
+            <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+          </h2>
+        </li>
+      {% endfor %}
+    </ul>
+  
+  </div>
