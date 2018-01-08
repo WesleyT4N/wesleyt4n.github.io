@@ -11,14 +11,24 @@ layout: default
   
     <ul class="post-list">
       {% for post in site.posts %}
-        <li class="post">
+        <li class="post-entry">
           <div class="post-img">
             <img src="{{ post.image | absolute_url }}" 
                  aria-label="project screenshot"/>
           </div>
-          <h2>
-            <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-          </h2>
+          <div class="post-entry-header">
+            <a class="post-link" href="{{ post.url | relative_url }}">
+              <h1 class="post-link-title">{{ post.title | escape }}</h1>
+              <div class="post-language-list">
+              <br>
+              {% for lang in post.languages %}
+                <p class="post-language">{{ lang }}</p>
+              {% endfor %}
+              </div>
+              <a class="post-repo-link" href="{{ post.repo_link
+                | absolute_url }}"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+            </a>
+          </div>
         </li>
       {% endfor %}
     </ul>
