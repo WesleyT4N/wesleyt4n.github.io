@@ -457,6 +457,7 @@ hr {
   width: 48px;
   height: 48px;
   border-radius: 50%;
+  margin: 0 auto;
   @include font-size(24px);
   @include for-tablet-portrait-up {
     width: 64px;
@@ -743,7 +744,8 @@ hr {
   height: 100%;
   z-index: 0;
   img {
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     min-width: 100%;
     height: 100%;
   }
@@ -757,9 +759,15 @@ hr {
   text-align: center;
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: transparentize($darkGrey, .05);
   color: $white;
   @include font-size(28px);
