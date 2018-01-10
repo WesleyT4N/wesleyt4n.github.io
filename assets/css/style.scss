@@ -187,6 +187,8 @@ hr {
   grid-area: header;
   max-width: 100%;
   position: relative;
+  top: 0;
+  left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -254,8 +256,8 @@ hr {
   border-radius: 50%;
   border: 4px solid $base;
   @include for-tablet-portrait-up {
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 96px;
+    max-height: 96px;
   }
 }
 
@@ -282,8 +284,7 @@ hr {
   max-height: 150px;
   padding: 4px 8px 4px 8px;
   @include for-tablet-portrait-up {
-    min-height: 100px;
-    max-height: 150px;
+    height: 96px;
     padding: 16px 32px 20px 32px;
   }
   background-color: $white;
@@ -326,7 +327,7 @@ hr {
   color: $darkGrey;
   @include font-size(22px);
   @include for-tablet-portrait-up {
-    @include font-size(36px);
+    @include font-size(32px);
   }
 }
 
@@ -349,22 +350,22 @@ hr {
 
 .header-title {
   color: $base;
-  @include font-size(24px);
+  @include font-size(28px);
   margin-top: 8px;
   margin-bottom: 4px;
   @include for-tablet-portrait-up {
-    @include font-size(36px);
+    @include font-size(32px);
     margin-top: 12px;
     margin-bottom: 8px;
   }
   border-bottom: 2px solid $accent;
   display: inline-block;
-  
 }
 
 .header-content {
   font-family: $body;
   color: $darkGrey;
+  line-height: 1.5rem;
   @include font-size(16px);
   @include for-tablet-portrait-up {
     @include font-size(18px);
@@ -391,7 +392,7 @@ hr {
 }
 .header-subtitle {
   display: inline-block;
-  @include font-size(20px);
+  @include font-size(22px);
   color: $darkGrey;
 }
 .emphasis {
@@ -455,10 +456,8 @@ hr {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  @include font-size(24px);
-  @include for-tablet-portrait-up {
-    @include font-size(32px);
-  }
+  @include font-size(28px);
+
 }
 
 .collapse-left {
@@ -499,7 +498,7 @@ hr {
   border: 1px solid $base;
   border-radius: 50%;
   position: absolute;
-  left: calc(50% - 18px);
+  left: calc(50% - 24px);
   display: inline-block;
   bottom: -24px;
   display: -webkit-box;
@@ -599,26 +598,65 @@ hr {
 // CONTENT =====================================================================
 .page-content {
   grid-area: content;
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
   background-color: $lightGrey;
   color: $darkGrey;
   z-index: 0;
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
 }
 
-.projects-heading {
+.projects-heading, .post-header {
   background-color: $base;
   @include shadow(2);
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
   padding: 12px 24px 16px 12px;
   width: 100%;
   color: $white;
-  text-align: center;
-  @include font-size(22px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
   h1 {
     display: inline-block;
     padding-bottom: 2px;
     border-bottom: 2px solid $accent;
+    text-align: center;
+    @include font-size(36px);
+  }
+  @include for-tablet-landscape-up {
+    width: calc(100% - 550px);
+    position: fixed
   }
 }
 
+.home-btn {
+  border: 0px;
+  background-color: $white;
+  color: $base;
+  @include font-size(24px);
+  border-radius: 50%;
+  margin-top: 2px;
+  text-align: center;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 16px;
+}
+
+.home {
+  @include for-tablet-landscape-up() {
+    margin-top: 88px;
+  }
+}
 .post-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -633,22 +671,23 @@ hr {
   // align-items: flex-start;
   padding: 8px;
 }
+
 .post-entry {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
   background-color: $white;
-  padding-bottom: 16px;
   position: relative;
+  max-width: 100%;
   height: 256px;
-  overflow: hidden;
   @include shadow(1);
   margin: 8px;
+  overflow: hidden;
   img {
     min-width: 100%;
+    height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
-    margin-top: -20px;
   }
   @include for-tablet-landscape-up {
     width: 46%;
@@ -657,6 +696,13 @@ hr {
     width: 30%;
   }
 }
+
+// .post-img {
+//   width: 100%;
+//   height: 100%;
+//   overflow: hidden;
+
+// }
 
 .post-entry-header {
   width: 100%;
@@ -769,6 +815,66 @@ hr {
     background-color: $accent;
   }
 }
+
+.post {
+  margin: -16px auto;
+  z-index: -1;
+  max-width: 900px;
+  padding: 36px 36px 64px 36px;
+  background-color: $white;
+  font-family: $body;
+  position: relative;
+  @include shadow(1);
+  img {
+    display: block;
+    margin: 16px auto;
+    @include shadow(1);
+    max-width: 100%;
+  }
+  li {
+    margin-left: 32px;
+  }
+  h1 {
+    color: $white;
+    background: $darkGrey;
+    @include font-size(36px);
+    @include for-tablet-portrait-up {
+      @include font-size(48px);
+    }
+
+    width: 100%;
+    margin-top: 32px;
+    margin-bottom: 16px;
+    padding: 16px 32px 16px 32px;
+    @include shadow(1);
+  }
+  h2 {
+    @include font-size(32px);
+    margin-top: 16px;
+    margin-bottom: 8px;
+  }
+  h2, h3, h4, h5 {
+    color: $base;
+  }
+  p,li {
+    @include font-size(20px);
+    line-height: 2.25rem;
+  }
+  @include for-tablet-landscape-up {
+    margin-top: 48px;
+  }
+}
+
+.back-to-top-btn {
+  border: 0px;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  p {
+    margin-left: 8px;
+  }
+}
+
 
 
 // FOOTER ======================================================================

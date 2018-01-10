@@ -7,10 +7,11 @@ var docLoaded = function () {
   const buttonUp = document.getElementById("collapseUp");
   const header = document.getElementsByClassName("site-header")[0];
   const gridContainer = document.getElementsByClassName("grid-container")[0];
-  const ageContent = document.getElementsByClassName("page-content")[0];
+  const pageContent = document.getElementsByClassName("page-content")[0];
   const openForm = document.getElementById("openForm");
   const closeForm = document.getElementById("closeForm");
   const contactForm = document.getElementsByClassName("contact-form")[0];
+  const projectHeader = document.getElementsByClassName("projects-heading")[0];
   const openFormX = openForm.offsetLeft;
   const openFormY = openForm.offsetTop;
   // Save some width constants which will be used to animate the sidebar 
@@ -20,14 +21,19 @@ var docLoaded = function () {
   buttonLeft.addEventListener("click", function (e) {
     let gridWidth = gridContainer.clientWidth;
     let headerWidth = header.clientWidth;
+    let contentWidth = pageContent.clientWidth;
     if (headerVisible) {
-      gridContainer.style.transform = "translate(-" + (headerWidth - 28) + "px,0)";
+      header.style.left = "-" + (headerWidth - 28) + "px";
+      pageContent.style.left = "-" + (headerWidth - 28) + "px";
       buttonLeft.innerHTML = '<i class="fa fa-angle-right" aria-hidden="true"></i>';
-      gridContainer.style.width = gridWidth + (headerWidth - 28) + "px";
+      pageContent.style.width = contentWidth + (headerWidth - 28) + "px";
+      projectHeader.style.width = "100%";
     } else {
-      gridContainer.style.transform = "translate(0,0)";
+      header.style.left = "0px";
+      pageContent.style.left = "0px";
       buttonLeft.innerHTML = '<i class="fa fa-angle-left" aria-hidden="true"></i>';
-      gridContainer.style.width = "100vw";
+      pageContent.style.width = "100%";
+      projectHeader.style.width = "calc(100% - 550px)";
     }
     headerVisible = !headerVisible;
   });
@@ -36,10 +42,12 @@ var docLoaded = function () {
     let gridHeight = gridContainer.clientHeight;
     let headerHeight = header.clientHeight;
     if (headerVisible) {
-      gridContainer.style.transform = "translate(0,-" + (headerHeight - 28) + "px)";
+      header.style.top = "-" + (headerHeight - 28) + "px";
+      pageContent.style.top = "-" + (headerHeight - 28) + "px";
       buttonUp.innerHTML = '<i class="fa fa-angle-down" aria-hidden="true"></i>';
     } else {
-      gridContainer.style.transform = "translate(0,0)";
+      header.style.top = "0px";
+      pageContent.style.top = "0px";
       buttonUp.innerHTML = '<i class="fa fa-angle-up" aria-hidden="true"></i>';
     }
     headerVisible = !headerVisible;
