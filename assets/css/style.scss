@@ -759,7 +759,7 @@ hr {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: transparentize($darkGrey, .1);
+  background-color: transparentize($darkGrey, .05);
   color: $white;
   @include font-size(28px);
   @include for-tablet-portrait-up {
