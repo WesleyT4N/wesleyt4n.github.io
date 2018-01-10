@@ -2,8 +2,7 @@
 layout: post
 title: "PrimeQuery"
 date: 2018-1-4
-excerpt: "A lecture assistant web app allowing students to ask questions in
-real time while upvoting other questions they think are relevant."
+excerpt: "Helping professors answer lecture questions that matter."
 languages:
   - HTML
   - CSS
