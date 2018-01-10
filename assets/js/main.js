@@ -48,6 +48,10 @@ var docLoaded = function () {
     buttonUp.innerHTML = '<i class="fa fa-angle-down" aria-hidden="true"></i>';
   }
 
+  if (window.location.pathname != "/") {
+    backToTop.style.display = "inline";
+  }
+
   buttonUp.addEventListener("click", function (e) {
     let headerHeight = header.clientHeight;
     if (headerVisible) {

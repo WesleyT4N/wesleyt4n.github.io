@@ -941,8 +941,10 @@ hr {
   padding: 8px 12px 8px 12px;
   bottom: 2%;
   right: 2%;
+  display: none;
   p {
     margin-left: 8px;
+    display: inline-block;
   }
 }
 
