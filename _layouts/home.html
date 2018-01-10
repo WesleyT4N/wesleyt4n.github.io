@@ -1,33 +1,35 @@
 ---
-layout: default
+layout: default 
 ---
 <header class="projects-heading">
-    <a class="home-btn" href="/index.html"><i class="fa fa-home" aria-hidden="true"></i></a>
-    <h1>My Projects</h1>
+  <a class="home-btn" href="/index.html">
+    <i class="fa fa-home" aria-hidden="true"></i>
+  </a>
+  <h1>My Projects</h1>
 </header>
 <div class="home">
-    {{ content }}
-    <div class="post-wrapper">
-    <ul class="post-list">
-      {% for post in site.posts %}
-        <li class="post-entry">
-          <img src="{{ post.image | absolute_url }}" 
-          aria-label="project screenshot"/>
-          <div class="post-entry-header">
-            <a class="post-link" href="{{ post.url | relative_url }}">
-              <h1 class="post-link-title">{{ post.title | escape }}</h1>
-              <div class="post-language-list">
-              <br>
-              {% for lang in post.languages %}
-                <p class="post-language">{{ lang }}</p>
-              {% endfor %}
-              </div>
-              <a class="post-repo-link" href="{{ post.repo_link
-                | absolute_url }}"><i class="fa fa-github-square" aria-hidden="true"></i></a>
-            </a>
+  {{ content }}
+  <ul class="post-list">
+    {% for post in site.posts %}
+    <li class="post-entry">
+      <div class="post-img">
+        <img class="post-img" src="{{ post.image | relative_url }}" aria-label="project screenshot" />
+      </div>
+      <div class="post-entry-header">
+        <a class="post-link" href="{{ post.url | relative_url }}">
+          <h1 class="post-link-title">{{ post.title | escape }}</h1>
+          <div class="post-language-list">
+            <br> {% for lang in post.languages %}
+            <p class="post-language">{{ lang }}</p>
+            {% endfor %}
           </div>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
-  </div>
+          <a class="post-repo-link" href="{{ post.repo_link
+              | absolute_url }}">
+            <i class="fa fa-github-square" aria-hidden="true"></i>
+          </a>
+        </a>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
