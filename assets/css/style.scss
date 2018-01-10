@@ -641,7 +641,7 @@ hr {
   }
   @include for-tablet-landscape-up {
     width: calc(100% - 550px);
-    position: fixed
+    position: fixed;
   }
 }
 
