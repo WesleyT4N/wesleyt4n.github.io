@@ -28,7 +28,7 @@ var docLoaded = function () {
       pageContent.style.left = "-" + (headerWidth - 28) + "px";
       buttonLeft.innerHTML = '<i class="fa fa-angle-right" aria-hidden="true"></i>';
       pageContent.style.width = contentWidth + (headerWidth - 28) + "px";
-      projectHeader.style.width = "100%";
+      projectHeader.style.width = "calc(100% - 28px)";
     } else {
       header.style.left = "0px";
       pageContent.style.left = "0px";
