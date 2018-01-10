@@ -40,7 +40,7 @@ var docLoaded = function () {
   });
 
   // collapse header up event
-  if (window.location.pathname != "/index.html" && !window.matchMedia("(min-width: 900px)").matches) {
+  if (window.location.pathname != "/" && !window.matchMedia("(min-width: 900px)").matches) {
     let headerHeight = header.clientHeight;
     headerVisible = !headerVisible;
     header.style.top = "-" + (headerHeight - 28) + "px";
