@@ -12,6 +12,7 @@ var docLoaded = function () {
   const closeForm = document.getElementById("closeForm");
   const contactForm = document.getElementsByClassName("contact-form")[0];
   const projectHeader = document.getElementsByClassName("projects-heading")[0];
+  const backToTop = document.getElementById("backToTop");
   const openFormX = openForm.offsetLeft;
   const openFormY = openForm.offsetTop;
   // Save some width constants which will be used to animate the sidebar 
@@ -38,8 +39,16 @@ var docLoaded = function () {
     headerVisible = !headerVisible;
   });
 
+  // collapse header up event
+  if (window.location.pathname != "/index.html" && !window.matchMedia("(min-width: 900px)").matches) {
+    let headerHeight = header.clientHeight;
+    headerVisible = !headerVisible;
+    header.style.top = "-" + (headerHeight - 28) + "px";
+    pageContent.style.top = "-" + (headerHeight - 28) + "px";
+    buttonUp.innerHTML = '<i class="fa fa-angle-down" aria-hidden="true"></i>';
+  }
+
   buttonUp.addEventListener("click", function (e) {
-    let gridHeight = gridContainer.clientHeight;
     let headerHeight = header.clientHeight;
     if (headerVisible) {
       header.style.top = "-" + (headerHeight - 28) + "px";
@@ -77,6 +86,7 @@ var docLoaded = function () {
     contactVisible = !contactVisible;
   });
 
+  // close contact form event
   closeForm.addEventListener("click", function (e) {
     contactForm.style.transform = "scale(0)";
     if (window.matchMedia("(min-width: 900px)").matches) {
@@ -87,6 +97,20 @@ var docLoaded = function () {
       contactForm.style.left = "-240px";
     }
     contactVisible = false;
+  });
+
+  // back to top button event
+  backToTop.addEventListener("click", function (e) {
+    let headerHeight = header.clientHeight; 
+    let viewHeight = document.documentElement.clientHeight
+    if (headerVisible) {
+      document.body.scrollTop = headerHeight;
+      document.documentElement.scrollTop = headerHeight;
+    } else {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+
   });
 };
 
