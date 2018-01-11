@@ -15,6 +15,9 @@ var docLoaded = function () {
   const backToTop = document.getElementById("backToTop");
   const openFormX = openForm.offsetLeft;
   const openFormY = openForm.offsetTop;
+  var isSafari = navigator.vendor && navigator.vendor.indexOf('Apple') > -1 &&
+               navigator.userAgent && !navigator.userAgent.match('CriOS');
+  const origHeaderWidth = projectHeader.clientWidth;
   // Save some width constants which will be used to animate the sidebar 
   // collapsing and reopening
 
@@ -28,13 +31,23 @@ var docLoaded = function () {
       pageContent.style.left = "-" + (headerWidth - 28) + "px";
       buttonLeft.innerHTML = '<i class="fa fa-angle-right" aria-hidden="true"></i>';
       pageContent.style.width = contentWidth + (headerWidth - 28) + "px";
-      projectHeader.style.width = "calc(100% - 28px)";
+      // Janky safari work around
+      if (!isSafari) {
+        projectHeader.style.width = "calc(100% - 28px)";
+      } else {
+        projectHeader.style.width = origHeaderWidth + (headerWidth - 28) + "px";
+      }
     } else {
       header.style.left = "0px";
       pageContent.style.left = "0px";
       buttonLeft.innerHTML = '<i class="fa fa-angle-left" aria-hidden="true"></i>';
       pageContent.style.width = "100%";
-      projectHeader.style.width = "calc(100% - 550px)";
+      // Janky safari work around 
+      if (!isSafari) {
+        projectHeader.style.width = "calc(100% - 550px)";
+      } else {
+        projectHeader.style.width = origHeaderWidth + "px";
+      }
     }
     headerVisible = !headerVisible;
   });
