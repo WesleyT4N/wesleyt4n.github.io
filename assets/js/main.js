@@ -23,7 +23,6 @@ var docLoaded = function () {
 
   // Handles the collapsing header
   buttonLeft.addEventListener("click", function (e) {
-    let gridWidth = gridContainer.clientWidth;
     let headerWidth = header.clientWidth;
     let contentWidth = pageContent.clientWidth;
     if (headerVisible) {
@@ -32,10 +31,10 @@ var docLoaded = function () {
       buttonLeft.innerHTML = '<i class="fa fa-angle-right" aria-hidden="true"></i>';
       pageContent.style.width = contentWidth + (headerWidth - 28) + "px";
       // Janky safari work around
-      if (!isSafari) {
-        projectHeader.style.width = "calc(100% - 28px)";
-      } else {
+      if (isSafari || document.documentMode || /Edge/.test(navigator.userAgent)) {
         projectHeader.style.width = origHeaderWidth + (headerWidth - 28) + "px";
+      } else {
+        projectHeader.style.width = "calc(100% - 28px)";
       }
     } else {
       header.style.left = "0px";
@@ -43,10 +42,10 @@ var docLoaded = function () {
       buttonLeft.innerHTML = '<i class="fa fa-angle-left" aria-hidden="true"></i>';
       pageContent.style.width = "100%";
       // Janky safari work around 
-      if (!isSafari) {
-        projectHeader.style.width = "calc(100% - 550px)";
-      } else {
+      if (isSafari || document.documentMode || /Edge/.test(navigator.userAgent)) {
         projectHeader.style.width = origHeaderWidth + "px";
+      } else {
+        projectHeader.style.width = "calc(100% - 550px)";
       }
     }
     headerVisible = !headerVisible;
@@ -127,7 +126,6 @@ var docLoaded = function () {
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
     }
-
   });
 };
 
