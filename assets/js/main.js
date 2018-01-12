@@ -23,8 +23,8 @@ var docLoaded = function () {
 
   // Handles the collapsing header
   buttonLeft.addEventListener("click", function (e) {
-//     let headerWidth = header.clientWidth;
-//     let contentWidth = pageContent.clientWidth;
+    let headerWidth = header.clientWidth;
+    let contentWidth = pageContent.clientWidth;
 //     if (headerVisible) {
 //       header.style.left = "-" + (headerWidth - 28) + "px";
 //       pageContent.style.left = "-" + (headerWidth - 28) + "px";
