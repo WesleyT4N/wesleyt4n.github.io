@@ -160,39 +160,53 @@ hr {
 
 // GRID WRAPPER ================================================================
 .grid-container {
-  display: grid;
   width: 100%;
   height: 100%;
-  grid-template-rows: auto 1fr;
-  grid-template-areas:
-  "header"
-  "content";
   -webkit-transition: all .25s ease-in-out;
   transition: all .25s ease-in-out;
-  @include for-tablet-landscape-up {
-    height: 100%;
-    grid-template-columns: 550px 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    grid-gap: 0px;
-    grid-template-areas: 
-    "header content content"
-    "header content content"
-    "header content content";
+  @supports (display: grid) {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+    "header"
+    "content";
+    @include for-tablet-landscape-up {
+      height: 100%;
+      grid-template-columns: 550px 1fr 1fr;
+      grid-template-rows: auto auto auto;
+      grid-gap: 0px;
+      grid-template-areas: 
+      "header content content"
+      "header content content"
+      "header content content";
+    }
+    @include for-desktop-up {
+      grid-template-columns: 550px 1fr 1fr 1fr;
+      grid-template-rows: auto auto auto;
+      grid-gap: 0px;
+      grid-template-areas: 
+      "header content content content"
+      "header content content content"
+      "header content content content";
+    }
   }
-  @include for-desktop-up {
-    grid-template-columns: 550px 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    grid-gap: 0px;
-    grid-template-areas: 
-    "header content content content"
-    "header content content content"
-    "header content content content";
-  }
+
 }
 
 // HEADER ======================================================================
 .site-header {
-  grid-area: header;
+  @supports (display:grid) {
+    grid-area: header;
+    @include for-tablet-landscape-up {
+      width: 550px;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      padding: 16px 30px 16px 30px;
+      position: fixed;
+      height: 100%;
+    }
+  }
   max-width: 100%;
   position: relative;
   top: 0;
@@ -210,15 +224,6 @@ hr {
   -ms-flex-pack: center;
   justify-content: flex-start;
   padding: 16px 16px 32px 16px;
-  @include for-tablet-landscape-up {
-    width: 550px;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    padding: 16px 30px 16px 30px;
-    position: fixed;
-    height: 100%;
-  }
   background-color: $white;  
   color: $darkGrey;
   @include shadow(3);
@@ -227,7 +232,6 @@ hr {
 }
 
 .profile-header {
-  grid-area: header;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -353,10 +357,6 @@ hr {
   }
 }
 
-.profile-about {
-  grid-area: about;
-}
-
 .header-title {
   color: $base;
   @include font-size(28px);
@@ -474,6 +474,19 @@ hr {
 }
 
 .collapse-left {
+  @supports (display: grid) {
+    @include for-tablet-landscape-up {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+    }
+  }
   background-color: $white;
   color: $base;
   width: 48px;
@@ -485,17 +498,6 @@ hr {
   left: 526px;
   display: none;
   @include font-size(36px);
-  @include for-tablet-landscape-up {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
   &:active {
     border: 2px solid $base;
     background-color: $base;
@@ -504,6 +506,11 @@ hr {
 }
 
 .collapse-up {
+  @supports (display: grid) {
+    @include for-tablet-landscape-up {
+      display: none;
+    }
+  }
   background-color: $white;
   color: $base;
   width: 48px;
@@ -521,9 +528,6 @@ hr {
       -ms-flex-pack: center;
           justify-content: center;
   @include font-size(36px);
-  @include for-tablet-landscape-up {
-    display: none;
-  }
   &:active {
     border: 2px solid $base;
     background-color: $base;
@@ -532,6 +536,13 @@ hr {
 }
 
 .contact-form {
+  @supports (display: grid) {
+    @include for-tablet-landscape-up {
+      width: 90%;
+      bottom: -128px;
+      left: -150px;
+    }
+  }
   position: absolute;
   background-color: $base;
   @include shadow(2);
@@ -543,11 +554,6 @@ hr {
           transform: scale(0);
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
-  @include for-tablet-landscape-up {
-    width: 90%;
-    bottom: -128px;
-    left: -150px;
-  }
 }
 .input {
   display: block;
@@ -610,7 +616,10 @@ hr {
 
 // CONTENT =====================================================================
 .page-content {
-  grid-area: content;
+  @supports (display: grid) {
+    grid-area: content;
+  }
+  display: block;
   position: relative;
   left: 0;
   top: 0;
@@ -834,9 +843,9 @@ hr {
 
 .post-link {
   text-align: center;
-  color: $base;;
-  display: -webkit-box;;
-  display: -ms-flexbox;;
+  color: $base;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
