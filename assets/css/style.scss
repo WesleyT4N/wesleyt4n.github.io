@@ -222,6 +222,7 @@ hr {
   background-color: $white;  
   color: $darkGrey;
   @include shadow(3);
+  overflow: visible;
   z-index: 2;
 }
 
@@ -921,6 +922,16 @@ hr {
   font-family: $body;
   position: relative;
   @include shadow(1);
+  a {
+    border: unset;
+    color: $base;
+    box-shadow: unset;
+    font-weight: 500;
+    &:hover, &:active {
+      color: $accent;
+      box-shadow: unset;
+    }
+  }
   img {
     display: block;
     margin: 16px auto;
