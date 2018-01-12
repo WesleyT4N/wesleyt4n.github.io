@@ -1,8 +1,8 @@
-"use strict";
 
-var headerVisible = true;
-var contactVisible = false;
+
 var docLoaded = function () {
+  var headerVisible = true;
+  var contactVisible = false;
   const buttonLeft = document.getElementById("collapseLeft");
   const buttonUp = document.getElementById("collapseUp");
   const header = document.getElementsByClassName("site-header")[0];
@@ -41,7 +41,7 @@ var docLoaded = function () {
       pageContent.style.left = "0px";
       buttonLeft.innerHTML = '<i class="fa fa-angle-left" aria-hidden="true"></i>';
       pageContent.style.width = "100%";
-      // Janky safari work around 
+//       Janky safari work around 
       if (isSafari || document.documentMode || /Edge/.test(navigator.userAgent)) {
         projectHeader.style.width = origHeaderWidth + "px";
       } else {
