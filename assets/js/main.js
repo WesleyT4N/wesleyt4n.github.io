@@ -31,22 +31,22 @@ var docLoaded = function () {
       buttonLeft.innerHTML = '<i class="fa fa-angle-right" aria-hidden="true"></i>';
       pageContent.style.width = contentWidth + (headerWidth - 28) + "px";
       // Janky safari work around
-      if (isSafari || document.documentMode || /Edge/.test(navigator.userAgent)) {
-        projectHeader.style.width = origHeaderWidth + (headerWidth - 28) + "px";
-      } else {
-        projectHeader.style.width = "calc(100% - 28px)";
-      }
+//       if (isSafari || document.documentMode || /Edge/.test(navigator.userAgent)) {
+//         projectHeader.style.width = origHeaderWidth + (headerWidth - 28) + "px";
+//       } else {
+//         projectHeader.style.width = "calc(100% - 28px)";
+//       }
     } else {
       header.style.left = "0px";
       pageContent.style.left = "0px";
       buttonLeft.innerHTML = '<i class="fa fa-angle-left" aria-hidden="true"></i>';
       pageContent.style.width = "100%";
       // Janky safari work around 
-      if (isSafari || document.documentMode || /Edge/.test(navigator.userAgent)) {
-        projectHeader.style.width = origHeaderWidth + "px";
-      } else {
-        projectHeader.style.width = "calc(100% - 550px)";
-      }
+//       if (isSafari || document.documentMode || /Edge/.test(navigator.userAgent)) {
+//         projectHeader.style.width = origHeaderWidth + "px";
+//       } else {
+//         projectHeader.style.width = "calc(100% - 550px)";
+//       }
     }
     headerVisible = !headerVisible;
   });
