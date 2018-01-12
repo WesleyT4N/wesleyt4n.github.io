@@ -17,6 +17,11 @@ var docLoaded = function () {
   const openFormY = openForm.offsetTop;
   var isSafari = navigator.vendor && navigator.vendor.indexOf('Apple') > -1 &&
                navigator.userAgent && !navigator.userAgent.match('CriOS');
+  var isEdge = document.documentMode || /Edge/.test(navigator.userAgent);
+  if (isEdge) {
+    buttonLeft.style.display = "none";
+  }
+  
   const origHeaderWidth = projectHeader.clientWidth;
   // Save some width constants which will be used to animate the sidebar 
   // collapsing and reopening
