@@ -1,58 +1,54 @@
 ---
 layout: post
-title: "PrimeQuery"
-date: 2018-1-4
-excerpt: "Helping professors answer lecture questions that matter."
+title: "JUST News"
+date: 2018-1-12
+excerpt: "Avoid fake news, and stay informed on all sides of a topic"
 languages:
   - HTML
   - CSS
   - JavaScript
-  - VueJS
   - Python
-  - SocketIO
-repo_link: "https://github.com/cakoch10/PrimeQuery"
-image: "/assets/img/primequery-desktop.jpg"
+repo_link: "https://github.com/cakoch10/neutral_news"
+image: "/assets/img/justnews.png"
 ---
-# A BigRedHacks 2017 Project
-![Desktop screenshot]({{ "/assets/img/primequery-desktop.jpg" | absolute_url }})
-![mobile screenshot]({{ "/assets/img/primequery-mobile.jpg" | absolute_url }})
-A lecture assistant web app allowing students to ask questions in
-real time while upvoting other questions they think are relevant.
+# A HackPrinceton 2017 Project
+![Desktop screenshot]({{ "/assets/img/justnews.png" | absolute_url }})
+
+A political article analytics web app, allowing users to submit an online article URL, 
+and then find alternative political viewpoints on a certain subject.
 
 # Langauges and Technologies Used
 - HTML
-- CSS / Sass
-- JavaScript / VueJS
+- CSS
+- JavaScript
 - Python
-- JSON
-- Socket.io
-- Google NLP
+- Google API
 
 # Background
 This was a project I worked on with three other students at a hackathon hosted at
-Cornell Univeristy. When attending lectures, we noticed several recurring 
-problems.
-- Students started asking extraneous questions that really didn't 
-enhance the understanding of the material
-- Students had valuable questions but were too scared to ask them in lecture. 
-- The professor would spend too much time answering unimportant questions resulting in the lecture ending up incomplete.
+Princeton Univeristy. With the immense popularity of political articles, we noticed
+several key problems with how people are consuming articles:
 
-In order to alleviate these problems, we decided to build PrimeQuery, helping
-students ask questions anonymously during lecture, and allowing them to filter 
-out the useless quesions themselves, all while allowing them to follow along
-with lecture slides on their device. Additionally, we used Google's Natural Langauge Processing API to filter out profanity and detect duplicate questions and prevent such questions from being entered.
+- Usually they only read a single one, and use it to form their opinion on the topic
+- They never inform themselves of the various outlooks people may have
+
+We developed JUST News as a response to this problem. It allows users to submit a
+URL of an article (such as one found on CNN.com for example), and then scrapes its
+keywords, uses the Google API to provide links other articles on the same topic, and then
+categorizes them under one of several political categories (far-left, center-left,
+ moderate, center-right, far-right).
 
 # My Role
 
-## Front-end
-- Designed the entire layout of the app using wireframes
-- Ensured the site was completely mobile responsive using CSS Grid and media queries
-- Enhanced the visual appeal and the usability of the site by writing all of CSS (With the help of Sass)
-- Simplified the process for updating the view after a user asks a question or upvotes one by utilizing VueJS (a JavaScript front-end framework I learned as I went along with this project)
-- Wrote the code required to send out and receive websocket signals (accomplished using Socket.io) whenever a user asked a question or upvoted one.
+## Front-End
+- Designed a simple, but intuitive UI for the app using HTML, CSS and Javascript
+- Ensured the app could render infinitely many articles if needed with the help of
+a slider
+- Used a simple AJAX request to retrieve any matching articles from the Python backend
 
-## Back-end 
-- Refined the functions used to handle websocket communications (Correctly updating the data file used to store questions and their votes, and then broadcasting to the front-end)
-- Redesigned the data files (JSON) used to store a sessions' set of questions and points
-- Assisted in the proper filtering of profanity and duplicate questions (using keyword recognition)
+
+## Back-End 
+- Wrote all the API functions necessary to send formatted data to the front-end
+- Did some last minute bug-fixing in order to properly link up the front-end to the
+back-end.
 

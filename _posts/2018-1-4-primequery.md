@@ -44,14 +44,14 @@ with lecture slides on their device. Additionally, we used Google's Natural Lang
 
 # My Role
 
-## Front-end
+## Front-End
 - Designed the entire layout of the app using wireframes
 - Ensured the site was completely mobile responsive using CSS Grid and media queries
 - Enhanced the visual appeal and the usability of the site by writing all of CSS (With the help of Sass)
 - Simplified the process for updating the view after a user asks a question or upvotes one by utilizing VueJS (a JavaScript front-end framework I learned as I went along with this project)
 - Wrote the code required to send out and receive websocket signals (accomplished using Socket.io) whenever a user asked a question or upvoted one.
 
-## Back-end 
+## Back-End 
 - Refined the functions used to handle websocket communications (Correctly updating the data file used to store questions and their votes, and then broadcasting to the front-end)
 - Redesigned the data files (JSON) used to store a sessions' set of questions and points
 - Assisted in the proper filtering of profanity and duplicate questions (using keyword recognition)
