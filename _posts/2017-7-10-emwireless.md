@@ -6,7 +6,7 @@ excerpt: "A simple static site for a phone vendor"
 languages:
   - HTML
   - CSS
-  - JavasSript
+  - JavaScript
   - PHP
 repo_link: "https://github.com/WesleyT4N/EM-Wireless-Website"
 image: "/assets/img/cardgameengine.png"
