@@ -15,7 +15,7 @@ image: "/assets/img/justnews.png"
 ![Desktop screenshot]({{ "/assets/img/justnews.png" | absolute_url }})
 
 A political article analytics web app, allowing users to submit an online article URL, 
-and then find alternative political viewpoints on a certain subject.
+and then find alternative political viewpoints on a certain subject. 
 
 # Langauges and Technologies Used
 - HTML
