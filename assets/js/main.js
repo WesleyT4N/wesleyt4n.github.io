@@ -122,18 +122,10 @@ var docLoaded = function () {
 
   // back to top button event
   backToTop.addEventListener("click", function (e) {
-    let headerHeight = header.clientHeight; 
-    let viewHeight = document.documentElement.clientHeight
-    if (headerVisible) {
-      document.body.scrollTop = headerHeight;
-      document.documentElement.scrollTop = headerHeight;
-    } else {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    }
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
   });
 };
-
 
 
 if (document.readyState === "complete" ||
