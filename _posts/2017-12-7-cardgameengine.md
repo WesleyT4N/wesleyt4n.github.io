@@ -21,7 +21,7 @@ and then play it through the terminal
 
 # Background
 This was the final project for my functional programming course that I built with
-3 other group memebers. We wanted to design an engine that allowed users to write
+3 other group members. We wanted to design an engine that allowed users to write
 their own card game rules and then play the game. Using a custom card game language
 to define the rules, users can encode a card game in our engine and then play it.
 
