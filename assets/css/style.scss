@@ -43,10 +43,10 @@
 }
 
 // COLOR PALETTE ==============================================================
-$base: #013e85;
+$base: #1e345d;
 $accent: #cc3628;
 $darkGrey: #001524;
-$lightGrey: #979797;
+$lightGrey: #bbb;
 $white: #ececec;
 
 // FONTS =======================================================================
@@ -112,7 +112,6 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 2px solid $accent;
   @include font-size(18px);
   @include for-tablet-portrait-up {
     @include font-size(22px);
@@ -127,7 +126,7 @@ button {
   &:active {
     @include shadow(2);
     background-color: $white;
-    color: $accent;
+    color: $base;
   }
 }
 
@@ -137,7 +136,6 @@ a {
   font: inherit;
   -webkit-transition: all .25s ease;
   transition: all .25s ease;
-  border: 2px solid $accent;
   @include shadow(1);
   &:hover {
     @include shadow(3);
@@ -148,7 +146,7 @@ a {
   &:active {
     @include shadow(2);
     background-color: $white;
-    color: $accent;
+    color: $base;
   }
 }
 
@@ -417,7 +415,7 @@ hr {
   display: block;
   text-align: center;
   font-weight: 500;
-  background-color: $accent;
+  background-color: $base;
   padding: 8px 8px 8px 8px;
   color: $white;
   margin-top: 16px;
@@ -450,7 +448,7 @@ hr {
 .contact-button {
   text-align: center;
   font-weight: 500;
-  background-color: $accent;
+  background-color: $base;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -670,7 +668,6 @@ hr {
   @supports (display: grid) {
 
   }
-  border: 0px;
   background-color: $white;
   color: $base;
   @include font-size(24px);
@@ -690,6 +687,9 @@ hr {
   position: absolute;
   left: 16px;
   top: 18px;
+  &:active {
+    color: $accent
+  }
 }
 
 .repo-btn {
