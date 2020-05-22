@@ -1,5 +1,3 @@
-
-
 var docLoaded = function () {
   var headerVisible = true;
   var contactVisible = false;
@@ -15,15 +13,18 @@ var docLoaded = function () {
   const backToTop = document.getElementById("backToTop");
   const openFormX = openForm.offsetLeft;
   const openFormY = openForm.offsetTop;
-  var isSafari = navigator.vendor && navigator.vendor.indexOf('Apple') > -1 &&
-               navigator.userAgent && !navigator.userAgent.match('CriOS');
+  var isSafari =
+    navigator.vendor &&
+    navigator.vendor.indexOf("Apple") > -1 &&
+    navigator.userAgent &&
+    !navigator.userAgent.match("CriOS");
   var isEdge = document.documentMode || /Edge/.test(navigator.userAgent);
   if (isEdge) {
     buttonLeft.style.display = "none";
   }
-  
+
   const origHeaderWidth = projectHeader.clientWidth;
-  // Save some width constants which will be used to animate the sidebar 
+  // Save some width constants which will be used to animate the sidebar
   // collapsing and reopening
 
   // Handles the collapsing header
@@ -33,10 +34,15 @@ var docLoaded = function () {
     if (headerVisible) {
       header.style.left = "-" + (headerWidth - 28) + "px";
       pageContent.style.left = "-" + (headerWidth - 28) + "px";
-      buttonLeft.innerHTML = '<i class="fa fa-angle-right" aria-hidden="true"></i>';
+      buttonLeft.innerHTML =
+        '<i class="fa fa-angle-right" aria-hidden="true"></i>';
       pageContent.style.width = contentWidth + (headerWidth - 28) + "px";
       // Janky safari work around
-      if (isSafari || document.documentMode || /Edge/.test(navigator.userAgent)) {
+      if (
+        isSafari ||
+        document.documentMode ||
+        /Edge/.test(navigator.userAgent)
+      ) {
         projectHeader.style.width = origHeaderWidth + (headerWidth - 28) + "px";
       } else {
         projectHeader.style.width = "calc(100% - 28px)";
@@ -44,10 +50,15 @@ var docLoaded = function () {
     } else {
       header.style.left = "0px";
       pageContent.style.left = "0px";
-      buttonLeft.innerHTML = '<i class="fa fa-angle-left" aria-hidden="true"></i>';
+      buttonLeft.innerHTML =
+        '<i class="fa fa-angle-left" aria-hidden="true"></i>';
       pageContent.style.width = "100%";
-//       Janky safari work around 
-      if (isSafari || document.documentMode || /Edge/.test(navigator.userAgent)) {
+      //       Janky safari work around
+      if (
+        isSafari ||
+        document.documentMode ||
+        /Edge/.test(navigator.userAgent)
+      ) {
         projectHeader.style.width = origHeaderWidth + "px";
       } else {
         projectHeader.style.width = "calc(100% - 550px)";
@@ -57,7 +68,10 @@ var docLoaded = function () {
   });
 
   // collapse header up event
-  if (window.location.pathname != "/" && !window.matchMedia("(min-width: 900px)").matches) {
+  if (
+    window.location.pathname != "/" &&
+    !window.matchMedia("(min-width: 900px)").matches
+  ) {
     let headerHeight = header.clientHeight;
     headerVisible = !headerVisible;
     header.style.top = "-" + (headerHeight - 28) + "px";
@@ -74,7 +88,8 @@ var docLoaded = function () {
     if (headerVisible) {
       header.style.top = "-" + (headerHeight - 28) + "px";
       pageContent.style.top = "-" + (headerHeight - 28) + "px";
-      buttonUp.innerHTML = '<i class="fa fa-angle-down" aria-hidden="true"></i>';
+      buttonUp.innerHTML =
+        '<i class="fa fa-angle-down" aria-hidden="true"></i>';
     } else {
       header.style.top = "0px";
       pageContent.style.top = "0px";
@@ -127,9 +142,10 @@ var docLoaded = function () {
   });
 };
 
-
-if (document.readyState === "complete" ||
-  document.readyState === "interactive") {
+if (
+  document.readyState === "complete" ||
+  document.readyState === "interactive"
+) {
   docLoaded();
 } else {
   document.addEventListener("DOMContentLoaded", docLoaded);
