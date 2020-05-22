@@ -16,10 +16,9 @@
 title: Wes Tan's Portfolio
 email: wt237@cornell.edu
 description: >- # this means to ignore newlines until "baseurl:"
-  Welcome to my online portfolio. Come check out some of the things I've worked
-  on recently, and if you like what you see, feel free to contact me.
+  Welcome to Wes Tan's online portfolio!
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://wesleyt4n.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  WesleyT4N
 permalink: /:title/
 # Build settings
