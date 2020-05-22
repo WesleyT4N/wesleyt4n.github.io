@@ -1,0 +1,17 @@
+@value primary: #1e345d;
+@value primaryDark: #14233f;
+@value white: #fafafa;
+
+@value small: (max-width: 599px);
+@value medium: (min-width: 600px) and (max-width: 959px);
+@value large: (min-width: 960px);
+
+@value smallSpace: 8px;
+@value medSpace: 16px;
+@value largeSpace: 24px;
+@value xlSpace: 36px;
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Mono:wght@400;700&display=swap');
+
+@value headerFontFamily: 'Roboto Mono', monospace;
+@value bodyFontFamily: 'Lato', sans-serif;
