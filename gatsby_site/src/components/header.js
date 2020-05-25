@@ -11,16 +11,26 @@ const Header = ({ siteTitle }) => (
         wes tan
       </Link>
     </h1>
+    <h3 className={styles.subText}>developer / programmer</h3>
     <nav>
       <ul className={styles.navList}>
         <li className={styles.navItem}>
-          <Link className={styles.headerLink}>about</Link>
+          <Link href="#about" className={styles.headerLink}>
+            about
+          </Link>
         </li>
         <li className={styles.navItem}>
-          <Link className={styles.headerLink}>projects</Link>
+          <Link href="#projects" className={styles.headerLink}>
+            projects
+          </Link>
         </li>
         <li className={styles.navItem}>
-          <Link className={styles.headerLink}>contact</Link>
+          <a
+            href="https://drive.google.com/file/d/17jxIatiiusm-bvqqiiXiqjG171xZRFgh/view?usp=sharing"
+            className={styles.headerLink}
+          >
+            resume
+          </a>
         </li>
       </ul>
     </nav>

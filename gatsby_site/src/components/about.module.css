@@ -1,0 +1,76 @@
+@value globals: "../styles/global.css";
+@value primary, primaryDark, white from globals;
+@value small as bp-small, medium as bp-medium, large as bp-large from globals;
+@value smallSpace, medSpace, largeSpace, xlSpace from globals;
+@value headingFontFamily from globals;
+
+.sectionWrapper {
+    width: 100%;
+}
+
+.heading {
+    font-family: headingFontFamily;
+    margin: medSpace 0;
+}
+@media bp-small {
+    .heading {
+        text-align: center;
+    }
+}
+
+.bodyText {
+    font-size: 1.25rem;
+}
+
+.row {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+@media bp-small {
+    .row {
+        flex-direction: column-reverse;
+    }
+}
+.column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactList {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+}
+.contactListItem {
+    list-style: none;
+    margin: 0 medSpace;
+}
+
+.contactLink {
+    text-decoration: none;
+    color: primary;
+    font-family: headingFontFamily;
+    border: 2px solid primary;
+    padding: smallSpace medSpace;
+    font-size: 1.5rem;
+    transition: all .25s ease;
+    border-radius: 1.5rem;
+}
+.contactLink:hover, .contactLink:active {
+    color: white;
+    background: primary;
+}
+
+.profileImage {
+    border-radius: 50%;
+    max-height: 250px;
+    max-width: 250px;
+    height: 100%;
+    width: 100%;
+}
