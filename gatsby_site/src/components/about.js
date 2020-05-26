@@ -9,6 +9,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
+import { FaLinkedin, FaRegEnvelope } from "react-icons/fa";
 
 import { Button } from "./button";
 import styles from "./about.module.css";
@@ -38,6 +39,7 @@ const About = () => {
           <ul className={styles.contactList}>
             <li className={styles.contactListItem}>
               <a href="mailto:wt237@cornell.edu" className={styles.contactLink}>
+                <FaRegEnvelope className={styles.contactLinkIcon} />
                 email
               </a>
             </li>
@@ -46,6 +48,7 @@ const About = () => {
                 href="https://www.linkedin.com/in/wes-tan/"
                 className={styles.contactLink}
               >
+                <FaLinkedin className={styles.contactLinkIcon} />
                 linkedin
               </a>
             </li>

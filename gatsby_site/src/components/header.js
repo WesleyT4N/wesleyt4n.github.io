@@ -1,10 +1,10 @@
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
-import React from "react";
+import React, { useRef } from "react";
 
 import styles from "./header.module.css";
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <header className={styles.header}>
     <h1 className={styles.headerTitle}>
       <Link to="/" className={styles.headerLink}>
@@ -15,12 +15,12 @@ const Header = ({ siteTitle }) => (
     <nav>
       <ul className={styles.navList}>
         <li className={styles.navItem}>
-          <Link href="#about" className={styles.headerLink}>
+          <Link to="/#about" className={styles.headerLink}>
             about
           </Link>
         </li>
         <li className={styles.navItem}>
-          <Link href="#projects" className={styles.headerLink}>
+          <Link to="/#projects" className={styles.headerLink}>
             projects
           </Link>
         </li>

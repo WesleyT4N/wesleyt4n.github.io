@@ -15,33 +15,33 @@ image: "/assets/img/cardgameengine.png"
 
 ![Desktop screenshot]({{ "/assets/img/emwireless.png" | absolute_url }})
 
-A simple static site built and deployed as a freelance project for a Rhode 
+A simple static site built and deployed as a freelance project for a Rhode
 Island-based phone vendor. View [here](http://em-wireless.com/)
 
-# Langauges and Technologies Used
+# languages and technologies used
 - HTML
 - CSS
 - JavaScript
 - PHP
 
-# Background
+# background
 This was a simple site I built as a freelancer to help a phone vendor get some
-online presence. Includes a summary of their services and a contact form to help 
+online presence. Includes a summary of their services and a contact form to help
 customers reach out to the store.
 
-# My Role
+# my role
 
-## Front-End
+## front-end
 - Designed layout using wireframes
 - Used PHP to help with some basic templating
 - Ensured site was mobile responsive so customers using their phones could navigate
 the site easily
 
-## Back-End
+## back-end
 - Correctly validated and handled contact form responses so they could be filtered
 and then sent to the company email
 
-## Misc
+## misc
 - Implemented some basic SEO
 - Handled the entire deployment process (registration of domain, finding shared
 hosting provider, etc.)

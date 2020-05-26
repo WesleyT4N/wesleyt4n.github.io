@@ -19,3 +19,32 @@
 .linkButton  {
     border: 1px solid primary;
 }
+
+.sectionWrapper {
+    width: 100%;
+}
+
+.row {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+@media small {
+    .row {
+        flex-direction: column-reverse;
+    }
+}
+.column {
+    flex: 1;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@media small {
+    .column {
+        margin: medSpace 0;
+    }
+}

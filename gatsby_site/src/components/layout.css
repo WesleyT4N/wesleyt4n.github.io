@@ -2,7 +2,7 @@
 @value primary, primaryDark, white from globals;
 @value small as bp-small, medium as bp-medium, large as bp-large from globals;
 @value smallSpace, medSpace, largeSpace, xlSpace from globals;
-@value bodyFontFamily from globals;
+@value headingFontFamily, bodyFontFamily from globals;
 
 html {
     background-color: white;
@@ -16,4 +16,17 @@ body {
     margin: 0 auto;
     max-width: 768px;
     padding: 0 largeSpace largeSpace largeSpace;
+}
+
+h1,h2,h3 {
+    font-family: headingFontFamily;
+}
+@media bp-small {
+    h1,h2,h3 {
+        text-align: center;
+    }
+}
+
+h2, h3 {
+    font-weight: 400;
 }

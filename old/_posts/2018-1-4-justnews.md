@@ -14,18 +14,18 @@ image: "/assets/img/justnews.png"
 # A HackPrinceton 2017 Project
 ![Desktop screenshot]({{ "/assets/img/justnews.png" | absolute_url }})
 
-A political article analytics web app, allowing users to submit an online article URL, 
-and then find alternative political viewpoints on a certain subject. Check it out 
+A political article analytics web app, allowing users to submit an online article URL,
+and then find alternative political viewpoints on a certain subject. Check it out
 [here](http://35.202.206.128/)
 
-# Langauges and Technologies Used
+# languages and technologies used
 - HTML
 - CSS
 - JavaScript
 - Python
 - Google API
 
-# Background
+# background
 This was a project I worked on with three other students at a hackathon hosted at
 Princeton Univeristy. With the immense popularity of political articles, we noticed
 several key problems with how people are consuming articles:
@@ -39,17 +39,16 @@ keywords, uses the Google API to provide links other articles on the same topic,
 categorizes them under one of several political categories (far-left, center-left,
  moderate, center-right, far-right).
 
-# My Role
+# my role
 
-## Front-End
+## front-end
 - Designed a simple, but intuitive UI for the app using HTML, CSS and Javascript
 - Ensured the app could render infinitely many articles if needed with the help of
 a slider
 - Used a simple AJAX request to retrieve any matching articles from the Python backend
 
 
-## Back-End 
+## back-end
 - Wrote all the API functions necessary to send formatted data to the front-end
 - Did some last minute bug-fixing in order to properly link up the front-end to the
 back-end.
-

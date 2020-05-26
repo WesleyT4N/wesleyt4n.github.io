@@ -3,42 +3,12 @@
 @value small as bp-small, medium as bp-medium, large as bp-large from globals;
 @value smallSpace, medSpace, largeSpace, xlSpace from globals;
 @value headingFontFamily from globals;
-
-.sectionWrapper {
-    width: 100%;
-}
-
-.heading {
-    font-family: headingFontFamily;
-    margin: medSpace 0;
-}
-@media bp-small {
-    .heading {
-        text-align: center;
-    }
-}
+@value sectionWrapper from globals;
+@value row, column from globals;
 
 .bodyText {
     font-size: 1.25rem;
-}
-
-.row {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-}
-@media bp-small {
-    .row {
-        flex-direction: column-reverse;
-    }
-}
-.column {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin-top: 0;
 }
 
 .contactList {
@@ -46,10 +16,26 @@
     flex-direction: row;
     justify-content: center;
     padding: 0;
+    width: 100%;
 }
+@media bp-small {
+    .contactList {
+        margin: 0;
+        display:block;
+    }
+}
+
 .contactListItem {
     list-style: none;
     margin: 0 medSpace;
+}
+@media bp-small {
+    .contactList {
+        display:block;
+    }
+    .contactListItem {
+        margin: medSpace 0;
+    }
 }
 
 .contactLink {
@@ -61,10 +47,16 @@
     font-size: 1.5rem;
     transition: all .25s ease;
     border-radius: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.contactLink:hover, .contactLink:active {
+.contactLink:hover, .contactLink:focus, .contactLink:active {
     color: white;
     background: primary;
+}
+.contactLinkIcon {
+    margin-right: smallSpace;
 }
 
 .profileImage {
