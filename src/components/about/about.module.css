@@ -1,4 +1,4 @@
-@value globals: "../styles/global.css";
+@value globals: "../../styles/global.css";
 @value primary, primaryDark, white from globals;
 @value small as bp-small, medium as bp-medium, large as bp-large from globals;
 @value smallSpace, medSpace, largeSpace, xlSpace from globals;
@@ -18,24 +18,10 @@
     padding: 0;
     width: 100%;
 }
-@media bp-small {
-    .contactList {
-        margin: 0;
-        display:block;
-    }
-}
 
 .contactListItem {
     list-style: none;
     margin: 0 medSpace;
-}
-@media bp-small {
-    .contactList {
-        display:block;
-    }
-    .contactListItem {
-        margin: medSpace 0;
-    }
 }
 
 .contactLink {
@@ -62,7 +48,18 @@
 .profileImage {
     border-radius: 50%;
     max-height: 250px;
+    border: 8px solid primary;
     max-width: 250px;
     height: 100%;
     width: 100%;
+}
+
+@media bp-small {
+    .contactList {
+        margin: 0;
+        display: block;
+    }
+    .contactListItem {
+        margin: medSpace 0;
+    }
 }

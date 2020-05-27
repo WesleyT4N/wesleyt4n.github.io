@@ -1,25 +1,19 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react";
-import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 import { FaLinkedin, FaRegEnvelope } from "react-icons/fa";
 
-import { Button } from "./button";
 import styles from "./about.module.css";
-import { squareImage } from "../fragments/image";
 
 const About = () => {
   const data = useStaticQuery(graphql`
     query {
       image: file(relativePath: { eq: "profile.jpg" }) {
-        ...squareImage
+        childImageSharp {
+          fluid(maxWidth: 250) {
+            ...GatsbyImageSharpFluid
+          }
+        }
       }
     }
   `);
@@ -58,6 +52,7 @@ const About = () => {
           <Img
             fluid={data.image.childImageSharp.fluid}
             className={styles.profileImage}
+            alt="A Picture of Wes"
           />
         </div>
       </div>

@@ -1,6 +1,7 @@
 ---
 slug: "/projects/primequery"
 title: "PrimeQuery"
+type: project
 date: 2018-01-04
 excerpt: "Helping professors answer lecture questions that matter."
 languages:
@@ -11,9 +12,9 @@ languages:
   - Python
   - SocketIO
 repo_link: "https://github.com/cakoch10/PrimeQuery"
-image: "../images/primequery-desktop.jpg"
 ---
 ## a bigredhacks 2017 project
+
 ![Desktop screenshot](./images/primequery-desktop.jpg)
 
 # languages and technologies used

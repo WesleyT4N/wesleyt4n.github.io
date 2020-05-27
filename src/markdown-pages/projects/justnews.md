@@ -1,7 +1,8 @@
 ---
 slug: "/projects/just-news"
 title: "JUST News"
-date: 2018-01-12
+type: project
+date: 2017-06-12
 excerpt: "Avoid fake news, and stay informed on all sides of a topic"
 languages:
   - HTML
@@ -9,7 +10,6 @@ languages:
   - JavaScript
   - Python
 repo_link: "https://github.com/cakoch10/neutral_news"
-image: "../images/justnews.png"
 ---
 ## a hackprinceton 2017 project
 

@@ -1,7 +1,8 @@
 ---
 slug: "/projects/em-wiresless-website"
 title: "EM Wireless Website"
-date: 2017-12-07
+type: project
+date: 2017-06-07
 excerpt: "A simple static site for a phone vendor"
 languages:
   - HTML

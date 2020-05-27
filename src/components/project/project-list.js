@@ -1,10 +1,3 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
@@ -13,7 +6,10 @@ import ProjectCard from "./project-card";
 
 const projectsQuery = graphql`
   query {
-    allMarkdownRemark {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { frontmatter: { type: { eq: "project" } } }
+    ) {
       nodes {
         frontmatter {
           title
@@ -34,6 +30,7 @@ const ProjectList = () => {
       <div className={styles.cardList}>
         {projects.map(project => (
           <ProjectCard
+            key={project.title}
             title={project.title}
             excerpt={project.excerpt}
             slug={project.slug}

@@ -2,6 +2,7 @@
 @value primaryDark: #14233f;
 @value white: #fafafa;
 
+@value xsmall: (max-width: 374px);
 @value small: (max-width: 599px);
 @value medium: (min-width: 600px) and (max-width: 959px);
 @value large: (min-width: 960px);
@@ -22,6 +23,7 @@
 
 .sectionWrapper {
     width: 100%;
+    margin-bottom: xlSpace;
 }
 
 .row {

@@ -1,19 +1,25 @@
 import React from "react";
 import { graphql } from "gatsby";
+import { FaGithub } from "react-icons/fa";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
 import styles from "./project-tempalte.module.css";
 
-const Template = ({ data }) => {
+const ProjectTemplate = ({ data }) => {
   const { markdownRemark } = data; // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark;
   return (
     <Layout>
       <SEO title={frontmatter.title} />
-      <div className="blog-post">
-        <h1>{frontmatter.title}</h1>
+      <div>
+        <h1 className={styles.projectHeader}>
+          {frontmatter.title}
+          <a href={frontmatter.repo_link} className={styles.projectLink}>
+            <FaGithub />
+          </a>
+        </h1>
         <div
           className={styles.content}
           dangerouslySetInnerHTML={{ __html: html }}
@@ -31,9 +37,10 @@ export const pageQuery = graphql`
         date(formatString: "YYYY-MM-DD")
         slug
         title
+        repo_link
       }
     }
   }
 `;
 
-export default Template;
+export default ProjectTemplate;

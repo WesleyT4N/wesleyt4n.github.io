@@ -1,5 +1,43 @@
+@value globals: "../styles/global.css";
+@value primary, primaryDark, white from globals;
+@value small as bp-small, medium as bp-medium, large as bp-large from globals;
+@value smallSpace, medSpace, largeSpace, xlSpace from globals;
+@value headingFontFamily from globals;
+@value sectionWrapper from globals;
+@value row, column from globals;
 
-
+.projectHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 .content > p, li {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
+}
+.content > ul {
+    padding-left: largeSpace;
+}
+
+.projectLink {
+    text-decoration: none;
+    transition: opacity .25s ease;
+    margin-left: largeSpace;
+    display: flex;
+    align-items: center;
+    margin-top: 2px;
+    color: primary;
+    justify-content: center;
+}
+
+.projectLink:hover, .projectLink:active, projectLink:focus {
+    opacity: 0.5;
+}
+
+@media bp-small {
+    .projectHeader {
+        display: block
+    }
+    .projectLink {
+        margin: medSpace;
+    }
 }

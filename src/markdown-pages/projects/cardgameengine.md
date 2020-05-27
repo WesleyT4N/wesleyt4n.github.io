@@ -1,15 +1,16 @@
 ---
 slug: "/projects/card-game-engine"
 title: "Card Game Engine"
+type: project
 date: 2017-12-07
 excerpt: "Make and play custom card games"
 languages:
   - OCaml
   - JSON
 repo_link: "https://github.com/cakoch10/Generic_Card_Game_Engine"
-image: "../images/cardgameengine.png"
 ---
 ## an ocaml card game engine
+
 ![Desktop screenshot](./images/cardgameengine.png)
 
 An OCaml card game engine that allows users to build their own custom card game
