@@ -11,7 +11,7 @@ const Header = () => (
         wes tan
       </Link>
     </h1>
-    <h3 className={styles.subText}>developer / programmer</h3>
+    <h3 className={styles.subText}>software engineer</h3>
     <nav>
       <ul className={styles.navList}>
         <li className={styles.navItem}>

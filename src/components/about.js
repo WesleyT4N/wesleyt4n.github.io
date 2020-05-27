@@ -30,7 +30,7 @@ const About = () => {
       <div className={styles.row}>
         <div className={styles.column}>
           <p className={styles.bodyText}>
-            I'm a software developer recently graduated from Cornell University
+            I'm a software engineer recently graduated from Cornell University
             and now working full-time in the NYC area. I have experience working
             full-stack: designing & building user-interfaces, APIs, and
             databases. If you're interested in reaching out, feel free to
