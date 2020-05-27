@@ -8,7 +8,8 @@
 
 .bodyText {
     font-size: 1.25rem;
-    margin-top: 0;
+    margin: 0;
+    margin-right: smallSpace;
 }
 
 .contactList {
@@ -60,6 +61,10 @@
         display: block;
     }
     .contactListItem {
-        margin: medSpace 0;
+        margin: 0;
+        margin-top: medSpace;
+    }
+    .bodyText {
+        margin-right: 0;
     }
 }
