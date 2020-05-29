@@ -1,28 +1,24 @@
 @value globals: "../../styles/global.css";
 @value primary, primaryDark, white from globals;
-@value small as bp-small, medium as bp-medium, large as bp-large from globals;
+@value small as bp-small, medium as bp-medium, mediumPlus as bp-medium-plus, large as bp-large from globals;
 @value smallSpace, medSpace, largeSpace, xlSpace from globals;
 @value headingFontFamily from globals;
 @value sectionWrapper from globals;
-@value row, column from globals;
+@value rowRev, column from globals;
 
 .bodyText {
-    font-size: 1.25rem;
     margin: 0;
-    margin-right: smallSpace;
 }
 
 .contactList {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
     padding: 0;
-    width: 100%;
+    margin: medSpace 0;
 }
 
 .contactListItem {
     list-style: none;
-    margin: 0 medSpace;
+    margin: 0;
+    margin-top: medSpace;
 }
 
 .contactLink {
@@ -55,16 +51,16 @@
     width: 100%;
 }
 
-@media bp-small {
+@media bp-medium-plus {
     .contactList {
-        margin: 0;
-        display: block;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
     }
     .contactListItem {
-        margin: 0;
-        margin-top: medSpace;
+        margin: 0 medSpace;
     }
     .bodyText {
-        margin-right: 0;
+        padding: 0 medSpace;
     }
 }

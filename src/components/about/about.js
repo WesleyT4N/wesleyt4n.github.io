@@ -21,7 +21,14 @@ const About = () => {
   return (
     <div id="about" className={styles.sectionWrapper}>
       <h1 className={styles.heading}>about</h1>
-      <div className={styles.row}>
+      <div className={styles.rowRev}>
+        <div className={styles.column}>
+          <Img
+            fluid={data.image.childImageSharp.fluid}
+            className={styles.profileImage}
+            alt="A Picture of Wes"
+          />
+        </div>
         <div className={styles.column}>
           <p className={styles.bodyText}>
             I'm a software engineer recently graduated from Cornell University
@@ -47,13 +54,6 @@ const About = () => {
               </a>
             </li>
           </ul>
-        </div>
-        <div className={styles.column}>
-          <Img
-            fluid={data.image.childImageSharp.fluid}
-            className={styles.profileImage}
-            alt="A Picture of Wes"
-          />
         </div>
       </div>
     </div>

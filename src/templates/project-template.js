@@ -5,7 +5,7 @@ import { FaGithub } from "react-icons/fa";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-import styles from "./project-tempalte.module.css";
+import styles from "./project-template.module.css";
 
 const ProjectTemplate = ({ data }) => {
   const { markdownRemark } = data; // data.markdownRemark holds your post data

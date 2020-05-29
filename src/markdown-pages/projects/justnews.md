@@ -11,7 +11,7 @@ languages:
   - Python
 repo_link: "https://github.com/cakoch10/neutral_news"
 ---
-## a hackprinceton 2017 project
+# a hackprinceton 2017 project
 
 ![Desktop screenshot](./images/justnews.png)
 
@@ -29,7 +29,7 @@ and then find alternative political viewpoints on a certain subject.
 # background
 
 This was a project I worked on with three other students at a hackathon hosted at
-Princeton Univeristy. With the immense popularity of political articles, we noticed
+Princeton University. With the immense popularity of political articles, we noticed
 several key problems with how people are consuming articles:
 
 - Usually they only read a single one, and use it to form their opinion on the topic

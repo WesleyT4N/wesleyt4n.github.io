@@ -13,11 +13,12 @@ languages:
   - SocketIO
 repo_link: "https://github.com/cakoch10/PrimeQuery"
 ---
-## a bigredhacks 2017 project
+# a bigredhacks 2017 project
 
 ![Desktop screenshot](./images/primequery-desktop.jpg)
 
 # languages and technologies used
+
 - HTML
 - CSS / Sass
 - JavaScript / VueJS
@@ -28,8 +29,9 @@ repo_link: "https://github.com/cakoch10/PrimeQuery"
 
 # background
 This was a project I worked on with three other students at a hackathon hosted at
-Cornell Univeristy. When attending lectures, we noticed several recurring
+Cornell University. When attending lectures, we noticed several recurring
 problems.
+
 - Students started asking extraneous questions that really didn't
 enhance the understanding of the material
 - Students had valuable questions but were too scared to ask them in lecture.
@@ -43,6 +45,7 @@ with lecture slides on their device. Additionally, we used Google's Natural Lang
 # my role
 
 ## front-end
+
 - Designed the entire layout of the app using wireframes
 - Ensured the site was completely mobile responsive using CSS Grid and media queries
 - Enhanced the visual appeal and the usability of the site by writing all of CSS (With the help of Sass)
@@ -50,6 +53,7 @@ with lecture slides on their device. Additionally, we used Google's Natural Lang
 - Wrote the code required to send out and receive websocket signals (accomplished using Socket.io) whenever a user asked a question or upvoted one.
 
 ## back-end
+
 - Refined the functions used to handle websocket communications (Correctly updating the data file used to store questions and their votes, and then broadcasting to the front-end)
 - Redesigned the data files (JSON) used to store a sessions' set of questions and points
 - Assisted in the proper filtering of profanity and duplicate questions (using keyword recognition)

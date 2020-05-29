@@ -1,6 +1,6 @@
 @value globals: "../../styles/global.css";
 @value primary, primaryDark, white from globals;
-@value small as bp-small, medium as bp-medium, large as bp-large from globals;
+@value small as bp-small, medium as bp-medium, mediumPlus as bp-medium-plus, large as bp-large from globals;
 @value smallSpace, medSpace, largeSpace, xlSpace from globals;
 @value headingFontFamily from globals;
 @value sectionWrapper from globals;
@@ -9,11 +9,13 @@
 .cardWrapper {
     border: 2px solid primary;
     border-radius: 4rem;
-    margin: medSpace smallSpace;
+    margin: 0;
+    margin-bottom: largeSpace;
     transition: all .25s ease;
     text-decoration: none;
     color: primary;
     display:flex;
+    text-align: center;
 }
 .cardWrapper > * {
     margin: 0;
@@ -31,12 +33,15 @@
     margin: 0;
     padding: 0;
 }
+.cardTitle {
+    font-weight: 600;
+}
 .cardWrapper:hover, .cardWrapper:focus, .cardWrapper:active {
     color: white;
     background: primary;
 }
-@media bp-small {
+@media bp-medium-plus {
     .cardWrapper {
-        text-align: center;
+        text-align: left;
     }
 }

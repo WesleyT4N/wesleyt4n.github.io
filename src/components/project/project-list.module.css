@@ -5,3 +5,7 @@
 @value headingFontFamily from globals;
 @value sectionWrapper from globals;
 @value row, column from globals;
+
+.cardList {
+    margin-top: xlSpace;
+}

@@ -25,7 +25,7 @@ const ExperienceCard = ({
       <div className={styles.cardHeader}>
         <h2 className={styles.title}>
           {title}
-          <span className={styles.location}>({location})</span>
+          <span className={styles.location}>{location}</span>
         </h2>
         <h2 className={styles.startEndDate}>{dateString}</h2>
       </div>

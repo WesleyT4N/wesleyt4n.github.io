@@ -1,6 +1,6 @@
 @value globals: "../styles/global.css";
 @value primary, primaryDark, white from globals;
-@value small as bp-small, medium as bp-medium, large as bp-large from globals;
+@value small as bp-small, medium as bp-medium, mediumPlus as bp-medium-plus,m large as bp-large from globals;
 @value smallSpace, medSpace, largeSpace, xlSpace from globals;
 @value headingFontFamily, bodyFontFamily from globals;
 
@@ -20,13 +20,26 @@ body {
 
 h1,h2,h3 {
     font-family: headingFontFamily;
+    text-align: center;
 }
-@media bp-small {
+h1 {
+    font-size: 2.5rem;
+}
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+@media bp-medium-plus {
     h1,h2,h3 {
-        text-align: center;
+        text-align: left;
     }
 }
 
-h2, h3 {
-    font-weight: 400;
+p, ul, li {
+    font-size: 1.25rem;
+    line-height: 2rem;
 }

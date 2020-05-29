@@ -5,6 +5,7 @@
 @value xsmall: (max-width: 374px);
 @value small: (max-width: 599px);
 @value medium: (min-width: 600px) and (max-width: 959px);
+@value mediumPlus: (min-width: 600px);
 @value large: (min-width: 960px);
 
 @value smallSpace: 8px;
@@ -29,14 +30,12 @@
 .row {
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: space-between;
 }
-@media small {
-    .row {
-        flex-direction: column-reverse;
-    }
+.rowRev {
+    margin: 0;
+    padding: 0;
 }
+
 .column {
     flex: 1;
     max-width: 100%;
@@ -44,10 +43,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0;
+    margin: medSpace 0;
 }
-@media small {
+@media mediumPlus {
+    .row {
+        display: flex;
+        justify-content: space-between;
+    }
+    .rowRev {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
     .column {
-        margin: medSpace 0;
+        margin: 0;
     }
 }

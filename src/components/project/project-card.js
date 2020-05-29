@@ -8,7 +8,7 @@ const ProjectCard = ({ title, excerpt, slug }) => {
   return (
     <div className={styles.cardWrapper}>
       <Link to={slug} className={styles.cardLink}>
-        <h2>{title}</h2>
+        <h2 className={styles.cardTitle}>{title}</h2>
         <p>{excerpt}</p>
       </Link>
     </div>

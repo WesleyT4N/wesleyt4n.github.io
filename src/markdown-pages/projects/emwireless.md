@@ -11,7 +11,7 @@ languages:
   - PHP
 repo_link: "https://github.com/WesleyT4N/EM-Wireless-Website"
 ---
-## a freelance project for phone vendor
+# a freelance project for phone vendor
 
 ![Desktop screenshot](./images/emwireless.png)
 
