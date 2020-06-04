@@ -26,7 +26,7 @@
     display: block;
 }
 .role {
-    margin: medSpace 0;
+    margin: smallSpace 0 0 0;
     font-style: italic;
     font-size: 1.25rem;
 }
@@ -34,8 +34,8 @@
     display: none;
 }
 .content > ul {
+    margin-top: medSpace;
     padding-left: largeSpace;
-    line-height: 1.75rem;
 }
 .content > ul > li:not(:last-child) {
     margin-bottom: smallSpace;
