@@ -3,7 +3,6 @@ slug: "/experience/datadog"
 title: "Datadog"
 type: experience
 start_date: 2020-08
-end_date: Present
-role: "Software Engineer II"
+role: "Software Engineer II (Billing Experience)"
 location: "New York, NY"
 ----

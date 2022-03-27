@@ -12,13 +12,16 @@ const ExperienceCard = ({
   html,
 }) => {
   const startDate = new Date(start_date);
-  const endDate = new Date(end_date);
+  const endDate = end_date ? new Date(end_date) : null;
 
-  const dateString = `${
+  let dateString = `${
     startDate.getUTCMonth() + 1
-  }/${startDate.getUTCFullYear()} - ${
-    endDate.getUTCMonth() + 1
-  }/${endDate.getUTCFullYear()}`;
+  }/${startDate.getUTCFullYear()} - `;
+  dateString =
+    dateString +
+    (endDate
+      ? `${endDate.getUTCMonth() + 1}/${endDate.getUTCFullYear()}`
+      : "Present");
 
   return (
     <div className={styles.cardWrapper}>
