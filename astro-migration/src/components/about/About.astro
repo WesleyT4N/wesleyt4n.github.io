@@ -1,0 +1,40 @@
+---
+import styles from "./about.module.css";
+---
+<div id="about" class={styles.sectionWrapper}>
+    <h1 class={styles.heading}>about</h1>
+    <div class={styles.rowRev}>
+        <div class={styles.column}>
+            {/* <Img */}
+            {/*     fluid={data.image.childImageSharp.fluid} */}
+            {/*     class={styles.profileImage} */}
+            {/*     alt="A Picture of Wes" */}
+            {/* /> */}
+        </div>
+        <div class={styles.column}>
+            <p class={styles.bodyText}>
+                I'm a software engineer working full-time in the NYC area. I have experience working
+                full-stack: designing & building user-interfaces, APIs, and
+            databases. If you're interested in reaching out, feel free to
+            contact me through one of the following methods:
+            </p>
+            <ul class={styles.contactList}>
+                <li class={styles.contactListItem}>
+                    <a href="mailto:wt237@cornell.edu" class={styles.contactLink}>
+                        {/* <FaRegEnvelope class={styles.contactLinkIcon} /> */}
+                        email
+                    </a>
+                </li>
+                <li class={styles.contactListItem}>
+                    <a
+                        href="https://www.linkedin.com/in/wes-tan/"
+                        class={styles.contactLink}
+                    >
+                        {/* <FaLinkedin class={styles.contactLinkIcon} /> */}
+                        linkedin
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

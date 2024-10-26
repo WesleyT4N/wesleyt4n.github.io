@@ -1,0 +1,68 @@
+@value globals: "../../styles/global.css";
+@value primary, primaryDark, white from globals;
+@value small as bp-small, medium as bp-medium, mediumPlus as bp-medium-plus, large as bp-large from globals;
+@value smallSpace, medSpace, largeSpace, xlSpace from globals;
+@value headingFontFamily from globals;
+@value sectionWrapper from globals;
+@value row, column from globals;
+
+.cardWrapper {
+    margin: largeSpace 0;
+}
+
+.cardHeader > * {
+    margin: smallSpace;
+}
+
+.title {
+    margin: 0;
+    font-weight: 600;
+    display: block;
+}
+.location {
+    font-size: 1.1rem;
+    margin: 0;
+    font-weight: 400;
+    display: block;
+}
+.role {
+    margin: smallSpace 0 0 0;
+    font-style: italic;
+    font-size: 1.25rem;
+}
+.content > p {
+    display: none;
+}
+.content > ul {
+    margin-top: medSpace;
+    padding-left: largeSpace;
+}
+.content > ul > li:not(:last-child) {
+    margin-bottom: smallSpace;
+}
+.startEndDate {
+    font-weight: 400;
+    font-size: 1.25rem;
+}
+
+@media bp-medium-plus {
+    .cardHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin: 0;
+    }
+    .cardWrapper {
+        padding: 0 medSpace;
+    }
+    .cardHeader > * {
+        margin: 0;
+    }
+    .location {
+        display: block;
+        font-size: 1.25rem;
+    }
+    .startEndDate {
+        font-size: 1.5rem;
+    }
+}

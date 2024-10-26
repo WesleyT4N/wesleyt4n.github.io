@@ -1,0 +1,61 @@
+@value primary: #1e345d;
+@value primaryDark: #14233f;
+@value white: #fafafa;
+
+@value xsmall: (max-width: 374px);
+@value small: (max-width: 599px);
+@value medium: (min-width: 600px) and (max-width: 959px);
+@value mediumPlus: (min-width: 600px);
+@value large: (min-width: 960px);
+
+@value smallSpace: 8px;
+@value medSpace: 16px;
+@value largeSpace: 24px;
+@value xlSpace: 36px;
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Mono:wght@400;700&display=swap');
+
+@value headingFontFamily: 'Roboto Mono', monospace;
+@value bodyFontFamily: 'Lato', sans-serif;
+
+.linkButton  {
+    border: 1px solid primary;
+}
+
+.sectionWrapper {
+    width: 100%;
+    margin-bottom: xlSpace;
+}
+
+.row {
+    margin: 0;
+    padding: 0;
+}
+.rowRev {
+    margin: 0;
+    padding: 0;
+}
+
+.column {
+    flex: 1;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: medSpace 0;
+}
+@media mediumPlus {
+    .row {
+        display: flex;
+        justify-content: space-between;
+    }
+    .rowRev {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+    .column {
+        margin: 0;
+    }
+}
