@@ -31,8 +31,7 @@ const About = () => {
         </div>
         <div className={styles.column}>
           <p className={styles.bodyText}>
-            I'm a software engineer recently graduated from Cornell University
-            and now working full-time in the NYC area. I have experience working
+            I'm a software engineer working full-time in the NYC area. I have experience working
             full-stack: designing & building user-interfaces, APIs, and
             databases. If you're interested in reaching out, feel free to
             contact me through one of the following methods:
