@@ -1,0 +1,37 @@
+---
+import styles from "./experience-card.module.css";
+interface Props {
+  title,
+  role,
+  location,
+  start_date,
+  end_date,
+  html,
+}
+
+const { title } = Astro.props;
+const startDate = new Date(start_date);
+const endDate = end_date ? new Date(end_date) : null;
+
+let dateString = `${startDate.getUTCMonth() + 1}/${startDate.getUTCFullYear()} - `;
+dateString =
+    dateString +
+    (endDate
+      ? `${endDate.getUTCMonth() + 1}/${endDate.getUTCFullYear()}`
+      : "Present");
+---
+<div class={styles.cardWrapper}>
+  <div class={styles.cardHeader}>
+    <h2 class={styles.title}>
+      {title}
+      <span class={styles.location}>{location}</span>
+    </h2>
+    <h2 class={styles.startEndDate}>{dateString}</h2>
+  </div>
+  <h3 class={styles.role}>{role}</h3>
+  <div
+    class={styles.content}
+    dangerouslySetInnerHTML={{ __html: html }}
+  />
+</div>
+
