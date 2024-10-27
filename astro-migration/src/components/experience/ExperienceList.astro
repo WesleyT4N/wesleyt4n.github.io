@@ -1,21 +1,23 @@
 ---
-import styles from "./experience-list.module.css";
-import ExperienceCard from "./experience-card.astro";
+import styles from './experience-list.module.css';
+import ExperienceCard from './ExperienceCard.astro';
+
+const experience = Object.values(await import.meta.glob('../../content/experience/*.md', { eager: true }));
 ---
 <div id="experience" class={styles.sectionWrapper}>
   <h1 class={styles.heading}>experience</h1>
   <div class={styles.cardList}>
-    <!-- {experience.map(e => ( -->
-    <!--   <ExperienceCard -->
-    <!--     key={e.title} -->
-    <!--     title={e.title} -->
-    <!--     role={e.role} -->
-    <!--     location={e.location} -->
-    <!--     start_date={e.start_date} -->
-    <!--     end_date={e.end_date} -->
-    <!--     html={e.html} -->
-    <!--   /> -->
-    <!-- ))} -->
+    {experience.map(e =>
+      <ExperienceCard
+        key={e.frontmatter.title}
+        title={e.frontmatter.title}
+        role={e.frontmatter.role}
+        location={e.frontmatter.location}
+        start_date={e.frontmatter.start_date}
+        end_date={e.frontmatter.end_date}
+        html={e.compiledContent()}
+      />
+    )}
   </div>
 </div>
 
