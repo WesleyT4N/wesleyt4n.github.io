@@ -1,5 +1,5 @@
 ---
-slug: "/projects/primequery"
+slug: "primequery"
 title: "PrimeQuery"
 type: project
 date: 2018-01-04

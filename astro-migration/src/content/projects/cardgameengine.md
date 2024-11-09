@@ -1,5 +1,5 @@
 ---
-slug: "/projects/card-game-engine"
+slug: "card-game-engine"
 title: "Card Game Engine"
 type: project
 date: 2017-12-07

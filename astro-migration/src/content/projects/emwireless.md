@@ -1,5 +1,5 @@
 ---
-slug: "/projects/em-wiresless-website"
+slug: "em-wiresless-website"
 title: "EM Wireless Website"
 type: project
 date: 2017-06-07

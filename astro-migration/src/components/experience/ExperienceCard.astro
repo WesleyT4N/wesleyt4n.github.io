@@ -10,6 +10,7 @@ interface Props {
 }
 
 const { title, role, location, start_date, end_date, html } = Astro.props;
+const { Content } = await html.render();
 const startDate = new Date(start_date);
 const endDate = end_date ? new Date(end_date) : null;
 
@@ -19,6 +20,8 @@ dateString =
     (endDate
       ? `${endDate.getUTCMonth() + 1}/${endDate.getUTCFullYear()}`
       : "Present");
+
+
 ---
 <div class={styles.cardWrapper}>
   <div class={styles.cardHeader}>
@@ -29,9 +32,8 @@ dateString =
     <h2 class={styles.startEndDate}>{dateString}</h2>
   </div>
   <h3 class={styles.role}>{role}</h3>
-  <div
-      class={styles.content}
-      set:html={html}
-  />
+  <div class={styles.content}>
+    <Content />
+  </div>
 </div>
 

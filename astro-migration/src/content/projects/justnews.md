@@ -1,5 +1,5 @@
 ---
-slug: "/projects/just-news"
+slug: "just-news"
 title: "JUST News"
 type: project
 date: 2017-06-12

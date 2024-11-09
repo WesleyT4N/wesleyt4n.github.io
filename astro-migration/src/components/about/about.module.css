@@ -1,4 +1,4 @@
-@value globals: "../../styles/global.css";
+@value globals: "@styles/global.css";
 @value primary, primaryDark, white from globals;
 @value small as bp-small, medium as bp-medium, mediumPlus as bp-medium-plus, large as bp-large from globals;
 @value smallSpace, medSpace, largeSpace, xlSpace from globals;
