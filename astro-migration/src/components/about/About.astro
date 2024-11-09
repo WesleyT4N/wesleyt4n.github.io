@@ -1,15 +1,18 @@
 ---
+import { Image } from "astro:assets";
+import { Icon } from 'astro-icon/components'
+import profileImage from "../../images/profile.jpg";
 import styles from "./about.module.css";
 ---
 <div id="about" class={styles.sectionWrapper}>
     <h1 class={styles.heading}>about</h1>
     <div class={styles.rowRev}>
         <div class={styles.column}>
-            {/* <Img */}
-            {/*     fluid={data.image.childImageSharp.fluid} */}
-            {/*     class={styles.profileImage} */}
-            {/*     alt="A Picture of Wes" */}
-            {/* /> */}
+            <Image
+                src={profileImage}
+                class={styles.profileImage}
+                alt="A Picture of Wes"
+              />
         </div>
         <div class={styles.column}>
             <p class={styles.bodyText}>
@@ -21,7 +24,7 @@ import styles from "./about.module.css";
             <ul class={styles.contactList}>
                 <li class={styles.contactListItem}>
                     <a href="mailto:wt237@cornell.edu" class={styles.contactLink}>
-                        {/* <FaRegEnvelope class={styles.contactLinkIcon} /> */}
+                      <Icon name="fa-solid:envelope" class={styles.contactLinkIcon} />
                         email
                     </a>
                 </li>
@@ -30,7 +33,7 @@ import styles from "./about.module.css";
                         href="https://www.linkedin.com/in/wes-tan/"
                         class={styles.contactLink}
                     >
-                        {/* <FaLinkedin class={styles.contactLinkIcon} /> */}
+                        <Icon name="fa-brands:linkedin" class={styles.contactLinkIcon} />
                         linkedin
                     </a>
                 </li>
