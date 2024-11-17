@@ -1,17 +1,16 @@
 ---
 import styles from './project-list.module.css';
 import ProjectCard from './ProjectCard.astro';
-import { getCollection, getEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
 
 const projects = await getCollection('projects');
-projects.sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
+projects.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
 ---
 <div id="projects" class={styles.sectionWrapper}>
   <h1 class={styles.heading}>projects</h1>
   <div class={styles.cardList}>
     {projects.map(project => (
       <ProjectCard
-        key={project.data.title}
         title={project.data.title}
         excerpt={project.data.excerpt}
         slug={"/projects/"+project.slug}

@@ -1,7 +1,7 @@
 ---
 import styles from './experience-list.module.css';
 import ExperienceCard from './ExperienceCard.astro';
-import { getCollection, getEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
 
 const experience = await getCollection('experience');
 ---
@@ -10,7 +10,6 @@ const experience = await getCollection('experience');
   <div class={styles.cardList}>
     {experience.map(e =>
       <ExperienceCard
-        key={e.data.title}
         title={e.data.title}
         role={e.data.role}
         location={e.data.location}
