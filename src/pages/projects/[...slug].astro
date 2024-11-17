@@ -1,0 +1,27 @@
+---
+import { getCollection } from 'astro:content';
+import styles from "@styles/project-template.module.css";
+import Layout from '@layouts/Layout.astro';
+import { Icon } from 'astro-icon/components'
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  return projects.map(project => ({
+    params: { slug: project.slug }, props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const { Content } = await project.render();
+---
+<Layout>
+  <h1 class={styles.projectHeader}>
+    {project.data.title}
+    <a href={project.data.repo_link} class={styles.projectLink}>
+      <Icon name="fa-brands:github" />
+    </a>
+  </h1>
+  <div class={styles.content}>
+    <Content />
+  </div>
+</Layout>

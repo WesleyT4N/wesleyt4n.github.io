@@ -1,0 +1,16 @@
+---
+import styles from './project-card.module.css';
+interface Props {
+  title: string;
+  excerpt: string;
+  slug: string;
+}
+
+const { title, excerpt, slug } = Astro.props;
+---
+<div class={styles.cardWrapper}>
+  <a href={slug} class={styles.cardLink}>
+    <h2 class={styles.cardTitle}>{title}</h2>
+    <p>{excerpt}</p>
+  </a>
+</div>

@@ -1,0 +1,24 @@
+---
+import styles from './experience-list.module.css';
+import ExperienceCard from './ExperienceCard.astro';
+import { getCollection, getEntry } from 'astro:content';
+
+const experience = await getCollection('experience');
+---
+<div id="experience" class={styles.sectionWrapper}>
+  <h1 class={styles.heading}>experience</h1>
+  <div class={styles.cardList}>
+    {experience.map(e =>
+      <ExperienceCard
+        key={e.data.title}
+        title={e.data.title}
+        role={e.data.role}
+        location={e.data.location}
+        start_date={e.data.start_date}
+        end_date={e.data.end_date}
+        html={e}
+      />
+    )}
+  </div>
+</div>
+

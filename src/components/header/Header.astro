@@ -1,0 +1,30 @@
+---
+import styles from './header.module.css';
+---
+<header class={styles.header}>
+  <h1 class={styles.headerTitle}>
+    <a href="/" class={styles.headerLink}>
+      wes tan
+    </a>
+  </h1>
+  <h3 class={styles.subText}>software engineer</h3>
+  <nav>
+    <ul class={styles.navList}>
+      <li class={styles.navItem}>
+        <a href="/#about" class={styles.headerLink}>
+          about
+        </a>
+      </li>
+      <li class={styles.navItem}>
+        <a href="/#experience" class={styles.headerLink}>
+          experience
+        </a>
+      </li>
+      <li class={styles.navItem}>
+        <a href="/#projects" class={styles.headerLink}>
+          projects
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>

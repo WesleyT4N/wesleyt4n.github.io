@@ -1,51 +1,25 @@
 {
-  "name": "wesleyt4n.github.io",
-  "private": true,
-  "description": "",
-  "version": "0.1.0",
-  "author": "Wes Tan",
-  "dependencies": {
-    "gatsby": "^2.21.37",
-    "gatsby-cli": "^4.10.2",
-    "gatsby-image": "^2.4.5",
-    "gatsby-plugin-manifest": "^2.4.5",
-    "gatsby-plugin-offline": "^3.2.3",
-    "gatsby-plugin-react-helmet": "^3.3.1",
-    "gatsby-plugin-sharp": "^2.6.9",
-    "gatsby-remark-images": "^3.3.8",
-    "gatsby-remark-relative-images": "^0.3.0",
-    "gatsby-source-filesystem": "^2.3.4",
-    "gatsby-transformer-remark": "^2.8.13",
-    "gatsby-transformer-sharp": "^2.5.3",
-    "gh-pages": "^2.2.0",
-    "prop-types": "^15.7.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-helmet": "^6.0.0",
-    "react-icons": "^3.10.0"
-  },
-  "devDependencies": {
-    "prettier": "2.0.5"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
+  "name": "",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "deploy": "gatsby build && gh-pages -d public -b master"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/react": "^3.6.2",
+    "@iconify-json/fa-brands": "^1.2.0",
+    "@iconify-json/fa-solid": "^1.2.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "astro": "^4.16.7",
+    "astro-icon": "^1.1.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.6.3"
   }
 }
